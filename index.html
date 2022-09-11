@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" type="image/x-icon" href="img/ojo2.ico">
+    <title>Intervalo JS</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color:red;
+            text-align: center;
+        }
+    </style>
+    <h1 class="h1">Hola Mundote</h1>
+    <img id="slider" width="400" height="400" />
+    <script>
+        window.addEventListener('load', function () {
+            console.log("Documento Cargado!");
+
+            const slider =document.getElementById("slider");
+
+            const imagenes = ["1.jpg","2.jpg","3.jpg"];
+            let indexImagenes=0; 
+
+            const cambiarImagenes=function(){
+               // slider.src="img/1.jpg";
+               slider.src=`img/${imagenes[indexImagenes]}`;
+               if (indexImagenes < (imagenes.length-1)) {
+                    indexImagenes++;
+               } else {
+                    indexImagenes = 0;
+               }
+            };
+
+            cambiarImagenes();
+
+            setInterval(cambiarImagenes,2000);
+        });
+        /*
+        const intervalo = function () {
+            console.log("Victor Reza Dos veces al dia");
+        };
+
+        setInterval(intervalo, 500);
+        */
+    </script>
+</body>
+</html>
