@@ -1,2 +1,2 @@
 # imagenesJS
-Repositorio usando una libreriaJS ".vscode" y HTML Puro.
+Repositorio Usando una libreriaJS (".vscode") y HTML Puro y CSS.
